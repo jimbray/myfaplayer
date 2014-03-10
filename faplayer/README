@@ -1,0 +1,15 @@
+VLC-1.2.0-git is on the road!
+
+Any questions please contact tewilove@gmail.com.
+
+Build steps:
+1. Edit local.properties to fit your environment.
+2. Run build.sh. (for some reason, you have to install ruby-1.9.2 first.)
+
+Currently you can only build the source with one ABI choice, armeabi or armeabi-v7a.
+If you want to disable NEON version of ffmpeg, open jni/Application.mk and change APP_ABI to armeabi.
+Cortex-A9 targets like XOOM do NOT have NEON, so you should set vfpv3 instead of neon to -mfpu.
+
+NDK issues:
+At least in NDK-r5b LOCAL_WHOLE_STATIC_LIBRARY doesn't work. Please search google for solutions.
+

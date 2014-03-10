@@ -1,0 +1,2 @@
+etc/vlcrc
+bin/ffmpeg
